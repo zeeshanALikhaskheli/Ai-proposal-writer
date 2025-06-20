@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -59,3 +60,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Ai-proposal-writer
+AI Proposal Writer is a Laravel-based web application that generates professional and personalized Upwork proposals using Google Gemini AI. It helps freelancers create concise, tailored proposals instantly to boost their chances of winning jobs.
+>>>>>>> 7a8eea5e3d64db5cd2520556a949e9a7f2249345
