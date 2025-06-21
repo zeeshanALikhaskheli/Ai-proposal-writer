@@ -39,23 +39,21 @@ Instructions:
 - The proposal should feel authentic, human, and directly tailored to this opportunity
 
 Your response should be ready to paste directly into Upwork — no headings or formatting required, just a clean, well-written proposal.";
-
+$apiKey = config('services.gemini.api_key'); // Best practice instead of env()
+$url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={$apiKey}";
 
     try {
-        $response = Http::withHeaders([
-            'Content-Type' => 'application/json',
-        ])->post(
-            'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' . env('GEMINI_API_KEY'),
-            [
-                'contents' => [
-                    [
-                        'parts' => [
-                            ['text' => $prompt]
-                        ]
-                    ]
-                ]
+       $response = Http::withHeaders([
+    'Content-Type' => 'application/json',
+])->post($url, [
+    'contents' => [
+        [
+            'parts' => [
+                ['text' => $prompt]
             ]
-        );
+        ]
+    ]
+]);
 
         if ($response->successful()) {
             $result = $response->json();
