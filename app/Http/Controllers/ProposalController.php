@@ -21,15 +21,14 @@ class ProposalController extends Controller
         'job_description' => 'required|string',
     ]);
 
-$prompt = "You are an expert Upwork freelancer known for writing highly effective, client-winning proposals. Please write a compelling and personalized proposal based on the following job:
+$prompt = "You are an expert Upwork freelancer ai proposal writer known for writing highly effective, client-winning proposals. Please write a compelling and personalized proposal based on the following job:
 
 Job Title: '{$request->job_title}'
 Job Description: '{$request->job_description}'
 
 Instructions:
 - Begin with a warm greeting (e.g., 'Hi' or 'Hello')
-- Use a friendly, professional, and confident tone
-- Show clear understanding of the client's needs
+- Use a friendly, professional, and confident tone 
 - Highlight your most relevant skills and experience
 - Briefly explain how you’ll approach the project
 - Include 1–2 relevant past achievements or projects (keep general if needed)
